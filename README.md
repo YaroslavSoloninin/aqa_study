@@ -29,7 +29,12 @@ source venv/bin/activate
 ```sh
 pip install -r requirements.txt
 ```
-6. Запусти тест
+6. Создай .env файл на основе .env.example в корне проекта и введи свои данные для SAUCE_USER и SAUCE_PASS
+```
+SAUCE_USER=your_user
+SAUCE_PASS=your_password
+```
+7. Запусти тест
 ```
 pytest
 ```
