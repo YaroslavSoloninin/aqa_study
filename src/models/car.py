@@ -6,3 +6,6 @@ class Car:
 
     def print_car_info(self) -> None:
         print(f"{self.brand} {self.model} ({self.year})")
+
+    def drive(self) -> None:
+        print("I'm driving")
