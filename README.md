@@ -1,6 +1,5 @@
 # aqa_study
 ## Инструкция для запуска
-
 1. Склонируй репозиторий:
 ```sh
 git https://github.com/YaroslavSoloninin/aqa_study.git
@@ -10,7 +9,7 @@ cd aqa_study
 ```
 2. Перейди в нужную ветку проекта
 ```sh
-git checkout feature/week5-playwright-2
+git checkout feature/week5-ui
 ```
 3. Создай виртуальное окружение 
 ```sh

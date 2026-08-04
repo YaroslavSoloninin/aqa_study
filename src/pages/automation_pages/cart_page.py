@@ -1,6 +1,6 @@
 from playwright.sync_api import Page
 
-from src.pages.base_page import BasePage
+from src.pages.automation_pages.base_page import BasePage
 from src.models.item import Item
 
 

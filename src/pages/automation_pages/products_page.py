@@ -1,7 +1,7 @@
 from playwright.sync_api import Page
 
-from src.pages.base_page import BasePage
-from src.pages.product_detail_page import ProductDetailPage
+from src.pages.automation_pages.base_page import BasePage
+from src.pages.automation_pages.product_detail_page import ProductDetailPage
 
 
 class ProductsPage(BasePage):
