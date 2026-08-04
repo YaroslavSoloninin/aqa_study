@@ -10,7 +10,7 @@ cd aqa_study
 ```
 2. Перейди в нужную ветку проекта
 ```sh
-git checkout feature/week6-requests-1
+git checkout feature/week6-requests-2
 ```
 3. Создай виртуальное окружение 
 ```sh
