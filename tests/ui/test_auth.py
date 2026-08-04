@@ -27,3 +27,4 @@ class TestAuth:
         login_page.login(TestData.WRONG_USERNAME, TestData.WRONG_PASSWORD)
         error = login_page.get_error_message()
         assert TestData.PARTIAL_ERROR_MESSAGE in error
+        assert page.url != TestData.URL_AFTER_LOGIN
