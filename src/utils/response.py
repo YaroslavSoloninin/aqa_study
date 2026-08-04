@@ -14,6 +14,10 @@ class ApiResponse[T]:
         self.__response = response
 
     @property
+    def url(self):
+        return self.__response.url
+
+    @property
     def data(self) -> T | None:
         return self.__data
     
