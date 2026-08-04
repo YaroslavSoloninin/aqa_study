@@ -1,4 +1,5 @@
 from pydantic import BaseModel, Field, ConfigDict
+
 from src.constants.content_type import ContentType
 
 
