@@ -10,6 +10,5 @@ class TestContentSubset:
     def test_content(self, page):
         page.goto(Config.BASE_URL)
         home_page = HomePage(page)
-        items_names = [item.name for item in home_page.get_items()]
-        print(items_names)
+        items_names = home_page.get_items()
         assert TestData.KEY_PRODUCTS_NAMES.issubset(items_names)
