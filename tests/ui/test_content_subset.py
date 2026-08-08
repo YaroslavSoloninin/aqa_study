@@ -14,3 +14,4 @@ class TestContentSubset:
         items_names = [item.name for item in home_page.get_items()]
         print(items_names)
         assert TestData.KEY_PRODUCTS_NAMES.issubset(items_names)
+        assert len(TestData.KEY_PRODUCTS_NAMES) <= len(items_names)
