@@ -12,11 +12,8 @@ class HomePage(BasePage):
 
     def get_items(self) -> list[Item]:
         items = []
-        for item_id, item_name in zip(
-            self.__items_ids.all(), 
-            self.__items_names.all()
-        ):
-            id = item_id.get_attribute("src").rsplit('/')[-1]
+        for item_id, item_name in zip(self.__items_ids.all(), self.__items_names.all()):
+            id = item_id.get_attribute("src").rsplit("/")[-1]
             name = item_name.text_content()
             items.append(Item(id, name))
         return items
