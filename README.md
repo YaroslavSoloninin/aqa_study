@@ -3,14 +3,14 @@
 
 1. Склонируй репозиторий:
 ```sh
-git clone https://github.com/YaroslavSoloninin/aqa_study.git
+git https://github.com/YaroslavSoloninin/aqa_study.git
 ```
 ```sh
 cd aqa_study
 ```
 2. Перейди в нужную ветку проекта
 ```sh
-git checkout feature/week7-quality-ci
+git checkout main
 ```
 3. Создай виртуальное окружение 
 ```sh
@@ -31,5 +31,5 @@ pip install -r requirements.txt
 ```
 6. Запусти тест
 ```
-./run_tests.sh
+pytest
 ```
