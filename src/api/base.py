@@ -34,6 +34,12 @@ class BaseAPI[T](ABC):
             data: dict[str, Any] | None = None
         ) -> ApiResponse[T]:
         return self.__request(HTTPMethod.POST, endpoint, response_model, json=data)
+
+    def _delete(
+            self,
+            endpoint: str
+    ):
+        return self.__request(HTTPMethod.DELETE, endpoint)
     
     def __request(
             self,
