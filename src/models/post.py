@@ -1,7 +1,7 @@
 from pydantic import BaseModel, ConfigDict, Field, field_validator
 
 
-class Post(BaseModel):  # type: ignore[misc]
+class Post(BaseModel):
     model_config = ConfigDict(extra="ignore", from_attributes=True)
 
     userId: int = Field(..., gt=0, description="ID автора поста")

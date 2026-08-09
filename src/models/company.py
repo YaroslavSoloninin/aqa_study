@@ -1,7 +1,7 @@
 from pydantic import BaseModel, Field, field_validator
 
 
-class Company(BaseModel):
+class Company(BaseModel):  # type: ignore[misc]
     name: str = Field(..., min_length=1, max_length=150)
     catchPhrase: str = Field(..., min_length=1, max_length=200)
     bs: str = Field(..., min_length=1, max_length=200)

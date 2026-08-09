@@ -3,7 +3,7 @@ from pydantic import BaseModel, Field, field_validator
 from src.models.geo import Geo
 
 
-class Address(BaseModel):
+class Address(BaseModel):  # type: ignore[misc]
     street: str = Field(..., min_length=1, max_length=200)
     suite: str = Field(..., min_length=1, max_length=50)
     city: str = Field(..., min_length=1, max_length=100)

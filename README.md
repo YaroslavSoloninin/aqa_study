@@ -1,6 +1,4 @@
 # aqa_study
-## Разница между responses и pytest-mock
-responses реально проверяет URL/метод запроса — если код обратится не туда, тест упадёт. mocker.patch("requests.Session.request") просто подменяет метод, вернёт мок при любом URL, ничего не проверяя.
 ## Инструкция для запуска
 1. Склонируй репозиторий:
 ```sh
@@ -30,7 +28,7 @@ source venv/bin/activate
 ```sh
 pip install -r requirements.txt
 ```
-6. Создай .env файл на основе .env.example в корне проекта и введи свои данные для SAUCE_USER и SAUCE_PASS
+6. (Опционально для test_auth) Создай .env файл на основе .env.example в корне проекта и введи свои данные для SAUCE_USER и SAUCE_PASS
 ```
 SAUCE_USER=your_user
 SAUCE_PASS=your_password

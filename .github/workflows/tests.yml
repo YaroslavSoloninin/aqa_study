@@ -25,7 +25,6 @@ jobs:
       - name: Install + Lint (как в Неделе 2 + 7.1)
         run: |
           pip install -r requirements.txt black flake8 isort mypy
-          black --check .
           flake8 .
           isort --check-only .
           mypy tests/

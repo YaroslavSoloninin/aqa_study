@@ -1,7 +1,7 @@
 from pydantic import BaseModel, Field, field_validator
 
 
-class Geo(BaseModel):
+class Geo(BaseModel):  # type: ignore[misc]
     lat: str = Field(..., description="Широта")
     lng: str = Field(..., description="Долгота")
 

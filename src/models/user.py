@@ -1,10 +1,10 @@
-from pydantic import BaseModel, Field, EmailStr, field_validator
+from pydantic import BaseModel, EmailStr, Field, field_validator
 
 from src.models.address import Address
 from src.models.company import Company
 
 
-class User(BaseModel):
+class User(BaseModel):  # type: ignore[misc]
     id: int = Field(..., gt=0)
     name: str = Field(..., min_length=1, max_length=150)
     username: str = Field(..., min_length=1, max_length=50)
