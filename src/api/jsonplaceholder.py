@@ -13,6 +13,15 @@ class JsonPlaceholderAPI(BaseAPI):
         endpoint = urljoin(self.__POSTS_ENDPOINT, str(id))
         return self._get(endpoint, Post | EmptyResponse)
 
+    def get_posts_by_user_id(self, user_id: int) -> ApiResponse[list[Post]]:
+        return self._get(
+            self.__POSTS_ENDPOINT,
+            list[Post],
+            params={"userId": user_id})
+
     def create_post(self, post: Post) -> ApiResponse[Post]:
         return self._post(self.__POSTS_ENDPOINT, Post, post.model_dump())
-    
+
+    def delete_post(self, id: int) -> ApiResponse[None]:
+        endpoint = urljoin(self.__POSTS_ENDPOINT, str(id))
+        return self._delete(endpoint)
