@@ -10,7 +10,7 @@ cd aqa_study
 ```
 2. Перейди в нужную ветку проекта
 ```sh
-git checkout feature/week5-playwright-2
+git checkout feature/week7-allure
 ```
 3. Создай виртуальное окружение 
 ```sh
@@ -31,5 +31,5 @@ pip install -r requirements.txt
 ```
 6. Запусти тест
 ```
-pytest
+./run_tests.sh
 ```

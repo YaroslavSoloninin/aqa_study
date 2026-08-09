@@ -1,5 +1,7 @@
 from playwright.sync_api import Page
 
+import allure
+from src.models.item import Item
 from src.pages.base_page import BasePage
 
 
@@ -8,10 +10,11 @@ class CartPage(BasePage):
         super().__init__(page)
         self.items = page.locator("a[href^='/product_details']")
 
-    def get_items(self) -> list:
+    @allure.step("Получаем список товаров в корзине")
+    def get_items(self) -> list[Item]:
         items = []
         for item in self.items.all():
-            id = int(item.get_attribute("href").rsplit("/")[-1])
+            id = int(item.get_attribute("href").rsplit("/")[-1])  # type: ignore[union-attr]
             name = item.text_content()
-            items.append()
+            items.append(Item(id, name))  # type: ignore[arg-type]
         return items
