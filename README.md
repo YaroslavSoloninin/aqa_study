@@ -3,14 +3,14 @@
 
 1. Склонируй репозиторий:
 ```sh
-git https://github.com/YaroslavSoloninin/aqa_study.git
+git clone https://github.com/YaroslavSoloninin/aqa_study.git
 ```
 ```sh
 cd aqa_study
 ```
 2. Перейди в нужную ветку проекта
 ```sh
-git checkout feature/week7-allure
+git checkout feature/week7-quality-ci
 ```
 3. Создай виртуальное окружение 
 ```sh
