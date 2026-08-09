@@ -10,7 +10,7 @@ cd aqa_study
 ```
 2. Перейди в нужную ветку проекта
 ```sh
-git checkout feature/week4-ui-auth-practice
+git checkout main
 ```
 3. Создай виртуальное окружение 
 ```sh
