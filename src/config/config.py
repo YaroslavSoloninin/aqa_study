@@ -1,2 +1,3 @@
 class Config:
-    BASE_URL = "https://automationexercise.com/"
+    SAUCEDEMO_URL = "https://www.saucedemo.com/"
+    AUTOMATIONEXERCISE_URL = "https://automationexercise.com/"
