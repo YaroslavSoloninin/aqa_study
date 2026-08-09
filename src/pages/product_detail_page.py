@@ -12,7 +12,7 @@ class ProductDetailPage(BasePage):
         self.__view_cart_button_modal = page.get_by_role("link", name="View Cart")
 
     @allure.step("Добавляем товар в корзину")
-    def add_product_to_cart(self):
+    def add_product_to_cart(self) -> None:
         self.__add_to_cart_button.click()
 
     @allure.step("Открываем корзину")

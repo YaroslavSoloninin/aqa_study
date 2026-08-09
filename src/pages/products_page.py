@@ -1,4 +1,4 @@
-from playwright.sync_api import Page
+from playwright.sync_api import Locator, Page
 
 import allure
 from src.pages.base_page import BasePage
@@ -15,5 +15,5 @@ class ProductsPage(BasePage):
         view_product_button.click()
         return ProductDetailPage(self.page)
 
-    def __product_link(self, product_id: int):
+    def __product_link(self, product_id: int) -> Locator:
         return self.page.locator(f"a[href='/product_details/{product_id}']")

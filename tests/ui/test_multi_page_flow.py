@@ -1,12 +1,14 @@
+from playwright.sync_api import Page
+
 import allure
 from src.config import Config
 from src.pages.home_page import HomePage
 from src.pages.products_page import ProductsPage
-from tests.test_data.test_data import TestData as TD
+from tests.test_data.data import TestData as TD
 
 
 class TestMultiPageFlow:
-    def test_add_to_cart(self, page):
+    def test_add_to_cart(self, page: Page) -> None:
         with allure.step("1. Переходим на главную страницу"):
             page.goto(Config.BASE_URL)
             home_page = HomePage(page)

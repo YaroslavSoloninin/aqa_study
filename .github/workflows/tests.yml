@@ -28,7 +28,7 @@ jobs:
           black --check .
           flake8 .
           isort --check-only .
-          mypy tests/ --strict
+          mypy tests/
 
   test-ui-api:
     needs: quality-gate

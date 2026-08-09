@@ -16,7 +16,7 @@ class HomePage(BasePage):
     @allure.step("Получаем все товары")
     def get_items(self) -> list[str]:
         product_names = [
-            el.inner_text().strip()
+            el.inner_text().replace("\xa0", "").strip()
             for el in self.__features_section.locator(".productinfo p").all()
             if el.is_visible()
         ]
