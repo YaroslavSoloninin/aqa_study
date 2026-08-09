@@ -1,9 +1,22 @@
 from typing import Any, Generator
+from datetime import datetime
 
 import pytest
 from playwright.sync_api import Page, sync_playwright
 
 from src.allure.allure_reporter import AllureReporter
+
+
+@pytest.fixture(scope="module", autouse=True)
+def setup_message():
+    print(f"\nФикстура создана {datetime.now().isoformat()}")
+    yield
+    print(f"Фикстура удалена {datetime.now().isoformat()}")
+
+
+@pytest.fixture()
+def teardown_message():
+    yield
 
 
 @pytest.fixture(scope="function")

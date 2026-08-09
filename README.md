@@ -3,7 +3,7 @@
 
 1. Склонируй репозиторий:
 ```sh
-git clone https://github.com/YaroslavSoloninin/aqa_study.git
+git https://github.com/YaroslavSoloninin/aqa_study.git
 ```
 ```sh
 cd aqa_study
