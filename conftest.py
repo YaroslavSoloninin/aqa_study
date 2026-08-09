@@ -27,7 +27,7 @@ def page() -> Generator[Page, None, None]:
         context.close()
         browser.close()
 
-
+        
 @pytest.hookimpl(hookwrapper=True, tryfirst=True)
 def pytest_runtest_makereport(
     item: pytest.Item, call: pytest.CallInfo[Any]
