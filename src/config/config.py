@@ -1,3 +1,4 @@
 class Config:
-    AUTOMATION_BASE_URL = "https://automationexercise.com/"
-    DUCK_BASE_URL = "https://duckduckgo.com/"
+    DUCK_DUCK_GO_URL = "https://duckduckgo.com/"
+    SAUCE_DEMO_URL = "https://www.saucedemo.com/"
+    AUTOMATION_EXERCISE_URL = "https://automationexercise.com/"
