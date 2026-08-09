@@ -1,8 +1,15 @@
 from typing import Any, Generator
 from datetime import datetime
-import pytest
 from playwright.sync_api import Page, sync_playwright
 from src.allure.allure_reporter import AllureReporter
+import pytest
+from src.api.jsonplaceholder import JsonPlaceholderAPI
+from src.config import Config
+
+
+@pytest.fixture
+def json_placeholder_api() -> JsonPlaceholderAPI:
+    return JsonPlaceholderAPI(Config.BASE_URL, Config.TIMEOUT)
 
 
 @pytest.fixture(scope="module", autouse=True)
